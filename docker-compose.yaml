@@ -1,0 +1,8 @@
+
+services:
+  builder:
+   tty: true
+   build: ./build-server
+   volumes:
+       - ./work:/work
+
