@@ -2,7 +2,7 @@
 services:
   builder:
    tty: true
-   build: ./build-server
+   build: ./builder
    volumes:
        - ./work:/work
 
