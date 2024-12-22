@@ -4,7 +4,7 @@ RUN apt-get clean
 RUN apt update
 RUN apt upgrade -y
 
-RUN apt-get install -y vim patch python
+RUN apt-get install -y vim patch python3 python3-pip python3-pexpect python3-git python3-jinja2 cpio
 
 RUN apt-get install -y sed wget git-core coreutils unzip texi2html texinfo \
 libsdl1.2-dev docbook-utils fop gawk python-pysqlite2 diffstat make gcc \
@@ -12,6 +12,8 @@ build-essential xsltproc g++ desktop-file-utils chrpath libgl1-mesa-dev \
 libglu1-mesa-dev autoconf automake groff libtool xterm libxml-parser-perl
 
 WORKDIR /work
+RUN mkdir yocto
+RUN cd yocto
 
 RUN git clone git://git.yoctoproject.org/poky
 RUN git clone git://git.yoctoproject.org/meta-renesas
