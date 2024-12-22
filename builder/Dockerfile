@@ -11,7 +11,8 @@ libsdl1.2-dev docbook-utils fop gawk python-pysqlite2 diffstat make gcc \
 build-essential xsltproc g++ desktop-file-utils chrpath libgl1-mesa-dev \
 libglu1-mesa-dev autoconf automake groff libtool xterm libxml-parser-perl
 
+WORKDIR /work
+
 RUN git clone git://git.yoctoproject.org/poky
 RUN git clone git://git.yoctoproject.org/meta-renesas
 
-WORKDIR /work
